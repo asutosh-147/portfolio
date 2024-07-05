@@ -2,7 +2,13 @@
 
 import React, { PropsWithChildren, useRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+  Variants,
+} from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
@@ -17,8 +23,26 @@ const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
 
 const dockVariants = cva(
-  "mx-auto h-max w-[58px] mt-8 p-2 flex flex-col items-center gap-2 rounded-2xl border",
+  "mx-auto h-max w-[58px] p-2 flex flex-col items-center gap-2 rounded-2xl border",
 );
+
+export const dockSlideLeft: Variants = {
+  hidden: {
+    x: 100,
+  },
+  visible: {
+    x: 0,
+    transition: {
+      type: "spring",
+      bounce: 200,
+      duration: 0.4,
+      damping: 12,
+      velocity: 200,
+      bounceDamping: 10,
+      delay: 1,
+    },
+  },
+};
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
   (
@@ -45,8 +69,11 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
 
     return (
       <motion.div
+        variants={dockSlideLeft}
+        initial="hidden"
+        animate="visible"
         ref={ref}
-        onMouseMove={(e) => mouseY.set(e.pageY)}
+        onMouseMove={(e) => mouseY.set(e.clientY)} // Change to clientY
         onMouseLeave={() => mouseY.set(Infinity)}
         {...props}
         className={cn(dockVariants({ className }), className)}
@@ -58,6 +85,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
 );
 
 Dock.displayName = "Dock";
+
 
 export interface DockIconProps {
   size?: number;
@@ -81,15 +109,16 @@ const DockIcon = ({
   const ref = useRef<HTMLDivElement>(null);
 
   const distanceCalc = useTransform(mouseY, (val: number) => {
-    const bounds = ref.current?.getBoundingClientRect() ?? { y: 0, width: 0 };
+    const bounds = ref.current?.getBoundingClientRect() ?? { y: 0, height: 0 };
 
-    return val - bounds.y - bounds.width / 2;
+    // Calculate distance from the mouse to the element's center
+    return val - (bounds.y + bounds.height / 2);
   });
 
   let widthSync = useTransform(
     distanceCalc,
     [-distance, 0, distance],
-    [40, magnification, 40],
+    [40, magnification, 40]
   );
 
   let width = useSpring(widthSync, {
@@ -114,5 +143,6 @@ const DockIcon = ({
 };
 
 DockIcon.displayName = "DockIcon";
+
 
 export { Dock, DockIcon, dockVariants };

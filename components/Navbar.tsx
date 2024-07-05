@@ -1,32 +1,74 @@
 import React from "react";
-import { Dock, DockIcon } from "./magicui/dock";
+import { Dock, DockIcon, dockSlideLeft } from "./magicui/dock";
 import {
   CodeBracketIcon,
   EnvelopeIcon,
   HomeIcon,
+  LinkIcon,
   UserIcon,
 } from "@heroicons/react/24/solid";
+import { BorderBeam } from "./magicui/border-beam";
+import Tooltip from "./Tooltip";
+import Link from "next/link";
+import { MotionDiv } from "./MotionDiv";
+
+const icons = [
+  {
+    link: "#home",
+    Icon: HomeIcon,
+  },
+  {
+    link: "#skills",
+    Icon: UserIcon,
+  },
+  {
+    link: "#projects",
+    Icon: CodeBracketIcon,
+  },
+  {
+    link: "#contact",
+    Icon: EnvelopeIcon,
+  },
+];
 
 const Navbar = () => {
   return (
     <>
-      <div className="fixed left-3 top-1/2 -translate-y-1/2 p-1 backdrop-blur-lg">
-        <Dock magnification={55} className="gap-3 border-gray-300">
-          <DockIcon>
-            <HomeIcon className="size-6" />
-          </DockIcon>
-          <DockIcon>
-            <CodeBracketIcon className="size-6" />
-          </DockIcon>
-          <DockIcon>
-            <UserIcon className="size-6" />
-          </DockIcon>
-          <DockIcon>
-            <EnvelopeIcon className="size-6" />
-          </DockIcon>
+      <div className="invisible fixed right-6 top-1/2 z-50 -translate-y-1/2 rounded-2xl p-1 backdrop-blur-lg sm:visible">
+        <Dock magnification={55} className="relative gap-3 border-gray-300">
+          {icons.map(({ link, Icon }, index) => {
+            return (
+              <DockIcon key={index}>
+                <Link href={link}>
+                  <Icon className="size-6 dark:text-gray-300" />
+                </Link>
+              </DockIcon>
+            );
+          })}
+          <BorderBeam
+            borderWidth={2}
+            size={90}
+            className=""
+            colorFrom="#374151"
+            colorTo="#374151"
+            duration={5}
+            delay={9}
+          />
         </Dock>
       </div>
-      
+      <MotionDiv
+        variants={dockSlideLeft}
+        initial="hidden"
+        animate="visible"
+        className="fixed bottom-10 right-7 size-11 rounded-full bg-black p-2 text-white transition-all duration-300 hover:scale-110"
+      >
+        <Link href={process.env.RESUME_LINK as string}>
+          <div className="group relative">
+            <LinkIcon className="animate-spin-slow" />
+            <Tooltip title="CV" position="left" />
+          </div>
+        </Link>
+      </MotionDiv>
     </>
   );
 };
