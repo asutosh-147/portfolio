@@ -36,8 +36,7 @@ const container: Variants = {
 const Online = ({ initialTime }: { initialTime: string }) => {
   const [time, setTime] = useState<string>(initialTime);
   const online =
-    time.split(" ")[2] == "AM" && Number(time.split(":")[0]) < 7 ? false : true;
-  // const online = false;
+    time.includes("AM") && Number(time.split(":")[0]) > 7 ? false : true;
   useEffect(() => {
     const interVal = setInterval(() => {
       const currentTime = new Date().toLocaleTimeString();
