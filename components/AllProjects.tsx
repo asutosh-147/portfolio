@@ -11,8 +11,16 @@ const Project = ({ description, imageUrl, tags, title }: projectData) => {
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
-  const transformedScaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const transformedOpacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const transformedScaleProgress = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0.8, 1],
+  );
+  const transformedOpacityProgress = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0.6, 1],
+  );
   return (
     <MotionDiv
       style={{

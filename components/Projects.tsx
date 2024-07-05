@@ -18,7 +18,10 @@ const fadeVariant: Variants = {
 };
 const Projects = () => {
   return (
-    <section id="projects" className="mx-auto mb-10 mt-32 flex w-3/4 justify-center scroll-mt-24">
+    <section
+      id="projects"
+      className="mx-auto mb-10 mt-32 flex w-3/4 scroll-mt-24 justify-center"
+    >
       <div className="flex w-full flex-col">
         <MotionDiv
           variants={fadeVariant}
@@ -31,7 +34,7 @@ const Projects = () => {
         </MotionDiv>
         <div className="mt-16 flex w-full flex-col items-center gap-5">
           {projectsData.map((projectData, index) => {
-            return <Project key={index} {...projectData} />
+            return <Project key={index} {...projectData} />;
           })}
         </div>
       </div>

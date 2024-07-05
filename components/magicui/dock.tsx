@@ -86,7 +86,6 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
 
 Dock.displayName = "Dock";
 
-
 export interface DockIconProps {
   size?: number;
   magnification?: number;
@@ -118,7 +117,7 @@ const DockIcon = ({
   let widthSync = useTransform(
     distanceCalc,
     [-distance, 0, distance],
-    [40, magnification, 40]
+    [40, magnification, 40],
   );
 
   let width = useSpring(widthSync, {
@@ -143,6 +142,5 @@ const DockIcon = ({
 };
 
 DockIcon.displayName = "DockIcon";
-
 
 export { Dock, DockIcon, dockVariants };

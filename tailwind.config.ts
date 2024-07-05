@@ -6,13 +6,13 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode:'selector',
+  darkMode: "selector",
   theme: {
     extend: {
       animation: {
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
-        "meteor": "meteor 5s linear infinite",
-        "spin-slow": 'spin 4s linear infinite',
+        meteor: "meteor 5s linear infinite",
+        "spin-slow": "spin 4s linear infinite",
       },
       keyframes: {
         "border-beam": {

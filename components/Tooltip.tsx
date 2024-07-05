@@ -3,7 +3,7 @@ import React from "react";
 
 const Tooltip = ({
   title,
-  position="top",
+  position = "top",
 }: {
   title: string;
   position?: "top" | "left" | "right" | "bottom";
@@ -17,7 +17,7 @@ const Tooltip = ({
   return (
     <label
       className={cn(
-        "absolute mb-3 w-max scale-0 rounded-lg bg-gray-900 px-3 text-center text-lg font-semibold text-white transition-all duration-300 group-hover:scale-100 pointer-events-none back capitalize",
+        "back pointer-events-none absolute mb-3 w-max scale-0 rounded-lg bg-gray-900 px-3 text-center text-lg font-semibold capitalize text-white transition-all duration-300 group-hover:scale-100",
         positionClasses[position],
       )}
     >

@@ -30,7 +30,10 @@ const Skills = () => {
   }, [] as reducedSkill);
   let del = 0;
   return (
-    <div id="skills" className="mx-auto mb-48 mt-20 flex w-3/5 flex-col items-start gap-8">
+    <div
+      id="skills"
+      className="mx-auto mb-48 mt-20 flex w-3/5 flex-col items-start gap-8"
+    >
       <MotionDiv
         variants={itemVariant}
         initial="hidden"
@@ -68,7 +71,7 @@ const Skills = () => {
                   key={j}
                   className="relative flex items-center justify-between gap-2 rounded-md border-2 border-black bg-white p-1"
                 >
-                  <Icon className="text-xl flex-1" />
+                  <Icon className="flex-1 text-xl" />
                   <div className="font-semibold">{name}</div>
                   <div className="absolute inset-0 -bottom-1 -right-1 -z-[1] rounded-[inherit] bg-black"></div>
                 </MotionDiv>

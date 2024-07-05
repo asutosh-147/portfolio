@@ -26,7 +26,8 @@ const Contact = () => {
           <div>
             contact me directly at{" "}
             <Highlight>
-              behuriaasutosh7@gmail.com <Tooltip title="mail Id" position="top" />
+              behuriaasutosh7@gmail.com{" "}
+              <Tooltip title="mail Id" position="top" />
             </Highlight>
           </div>
         </div>

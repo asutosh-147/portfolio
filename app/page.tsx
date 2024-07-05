@@ -11,7 +11,7 @@ function Home() {
       <Landing />
       <Skills />
       <Projects />
-      <Contact/>
+      <Contact />
     </div>
   );
 }
