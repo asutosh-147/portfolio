@@ -31,7 +31,7 @@ const Contact = () => {
         className="h-1 w-full border-t border-t-gray-400 dark:border-gray-300"
       ></MotionDiv>
       <div className="flex w-full flex-col items-center justify-center gap-10 pt-7 sm:flex-row sm:justify-between sm:gap-0">
-        <div className="text-center">
+        <div className="text-center sm:text-left">
           <MotionDiv
             initial={{ opacity: 0 }}
             whileInView={{
