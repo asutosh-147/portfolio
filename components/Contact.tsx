@@ -18,7 +18,10 @@ const fadeVariant: Variants = {
 };
 const Contact = () => {
   return (
-    <section id="contact" className="mx-auto mb-20 mt-48 w-3/4 text-gray-500 dark:text-gray-300">
+    <section
+      id="contact"
+      className="mx-auto mb-20 mt-48 w-full px-5 text-gray-500 sm:w-3/4 dark:text-gray-300"
+    >
       <MotionDiv
         initial={{ scale: 0 }}
         whileInView={{
@@ -27,8 +30,8 @@ const Contact = () => {
         }}
         className="h-1 w-full border-t border-t-gray-400 dark:border-gray-300"
       ></MotionDiv>
-      <div className="flex w-full items-center justify-between pt-7">
-        <div>
+      <div className="flex w-full flex-col items-center justify-center gap-10 pt-7 sm:flex-row sm:justify-between sm:gap-0">
+        <div className="text-center">
           <MotionDiv
             initial={{ opacity: 0 }}
             whileInView={{
@@ -59,7 +62,7 @@ const Contact = () => {
               opacity: 1,
               transition: { duration: 0.9, delay: 0.7 },
             }}
-            className="rounded-lg bg-gray-900 dark:bg-gray-300 font-semibold dark:text-gray-950 p-3 text-white"
+            className="rounded-lg bg-gray-900 p-3 font-semibold text-white dark:bg-gray-300 dark:text-gray-950"
           >
             Get In Touch
           </MotionDiv>

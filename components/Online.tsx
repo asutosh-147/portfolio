@@ -53,7 +53,7 @@ const Online = ({ initialTime }: { initialTime: string }) => {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="flex items-center w-full sm:w-3/4 justify-start sm:gap-10"
+      className="flex items-center justify-between px-3 sm:px-0 w-full lg:w-3/4 lg:justify-start sm:gap-10"
     >
       <div className="relative">
         <Image

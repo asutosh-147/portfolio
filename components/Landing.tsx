@@ -43,20 +43,20 @@ const container: Variants = {
 };
 function Landing() {
   return (
-    <div id="home" className="relative mx-auto w-full xl:w-3/4 ">
+    <div id="home" className="relative mx-auto w-full xl:w-3/4">
       <MotionDiv
-        className="absolute right-1 top-8 -z-[1] h-[31.5rem] w-[31.5rem] rounded-full bg-[#fbe2e3] blur-[8rem] transition-colors duration-300 sm:right-44 dark:bg-[#946263]"
+        className="absolute right-1 top-8 h-[37rem] w-[10rem] -z-[1] sm:h-[31.5rem] sm:w-[31.5rem] rounded-full bg-[#fbe2e3] blur-[8rem] transition-colors duration-300 sm:right-44 dark:bg-[#946263]"
         variants={fadeVariant}
         initial="hidden"
         animate="visible"
       />
       <MotionDiv
-        className="absolute -top-5 left-5 -z-[1] h-[35.5rem] w-[31.5rem] rounded-full bg-[#e2f1fb] blur-[8rem] transition-colors duration-300 sm:left-20 dark:bg-[#676394]"
+        className="absolute left-5 -z-[1] h-[37rem] w-[10rem] rounded-full bg-[#e2f1fb] blur-[8rem] transition-colors duration-300 sm:-top-5 sm:left-20 sm:h-[35.5rem] sm:w-[31.5rem] dark:bg-[#676394]"
         initial="hidden"
         animate="visible"
         variants={fadeVariant}
       />
-      <div className="mt-2 flex w-full flex-col-reverse items-center justify-center p-4 sm:flex-row sm:justify-around">
+      <div className="mx-auto mt-2 flex w-full flex-col-reverse items-center justify-center p-4 sm:mx-0 sm:flex-row sm:justify-around">
         <MotionDiv
           className="flex flex-col"
           initial="hidden"
@@ -137,14 +137,14 @@ function Landing() {
                 alt="profile-pic"
                 width={250}
                 height={250}
-                className="w-32 rounded-full shadow-2xl sm:w-72"
+                className="w-56 rounded-full shadow-2xl sm:w-72"
               />
               <Tooltip title="yeah, that's me :)" position="top" />
             </div>
           </CardContainer>
         </MotionDiv>
       </div>
-      <div className="mt-6 flex mx-auto w-full flex-col items-center justify-between sm:mt-0 sm:w-4/5 sm:flex-row">
+      <div className="mt-10 flex w-full flex-col items-center justify-between gap-10 sm:mx-auto sm:w-4/5 lg:mt-0 lg:flex-row">
         <Online initialTime={new Date().toLocaleTimeString()} />
         <About />
       </div>

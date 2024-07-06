@@ -20,7 +20,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="mx-auto mb-10 mt-32 flex w-3/4 scroll-mt-24 justify-center"
+      className="mb-10 mt-20 sm:mt-32 flex w-full scroll-mt-24 justify-center p-4 lg:mx-auto lg:w-3/4 lg:p-0"
     >
       <div className="flex w-full flex-col">
         <MotionDiv
@@ -28,7 +28,7 @@ const Projects = () => {
           viewport={{ once: true }}
           initial="hidden"
           whileInView="visible"
-          className="self-center text-5xl font-bold dark:text-gray-100"
+          className="self-center text-xl md:text-5xl font-bold dark:text-gray-100"
         >
           Personal Projects
         </MotionDiv>

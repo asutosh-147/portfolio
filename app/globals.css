@@ -33,3 +33,12 @@
     /* Thumb color and track color */
     border-radius: 25px;
 }
+
+.staggerContainer{
+    padding-left: var(--dynamic-padding-left, 0px);
+}
+@media (max-width:1024px) {
+    .staggerContainer{
+        padding-left: 0px;
+    }
+}

@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <>
       <div className="invisible fixed right-6 top-1/2 z-50 -translate-y-1/2 rounded-2xl p-1 backdrop-blur-lg sm:visible">
-        <Dock magnification={55} className="relative gap-3 border-gray-300 dark:bg-gray-800 dark:border-none">
+        <Dock magnification={55} className="relative gap-3 border-gray-300 dark:bg-gray-800 dark:border-none shadow-xl">
           {icons.map(({ link, Icon }, index) => {
             return (
               <DockIcon key={index} className="dark:bg-gray-700">
@@ -46,7 +46,7 @@ const Navbar = () => {
             );
           })}
           <BorderBeam
-            borderWidth={2}
+            borderWidth={1}
             size={90}
             className=""
             colorFrom="#374151"
@@ -60,7 +60,7 @@ const Navbar = () => {
         variants={dockSlideLeft}
         initial="hidden"
         animate="visible"
-        className="fixed bottom-10 right-7 size-11 rounded-full dark:bg-gray-800 bg-black p-2 text-white transition-all duration-300 hover:scale-110"
+        className="fixed bottom-10 right-7 size-11 rounded-full dark:bg-gray-800 bg-black p-2 text-white transition-all duration-300 hover:scale-110 z-10"
       >
         <Link href={process.env.RESUME_LINK as string} target="_blank">
           <div className="group relative">

@@ -20,11 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="custom-scrollbar !scroll-smooth">
-          <body className={`${poppins.className}bg-gray-50 dark:bg-gray-900 transition-colors duration-300 dark:text-gray-200`}>
+      <body
+        className={`${poppins.className}bg-gray-50 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-200 overflow-x-auto`}
+      >
         <ThemeContextProvider>
           <Navbar />
           {children}
-          <ThemeSwitch/>
+          <ThemeSwitch />
         </ThemeContextProvider>
       </body>
     </html>
