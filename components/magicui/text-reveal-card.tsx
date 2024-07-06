@@ -67,7 +67,7 @@ export const TextRevealCard = ({
       onTouchMove={touchMoveHandler}
       ref={cardRef}
       className={cn(
-        "relative w-max overflow-hidden rounded-lg border border-white/[0.08] bg-[#1d1c20] p-8",
+        "relative w-max overflow-hidden rounded-lg dark:text-gray-300 bg-[#1d1c20] p-8",
         className,
       )}
     >
@@ -89,7 +89,7 @@ export const TextRevealCard = ({
                 }
           }
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="absolute z-20 bg-[#1d1c20] will-change-transform"
+          className="absolute z-20 bg-[#1d1c20] dark:bg-gray-900 rounded-lg will-change-transform"
         >
           <p
             style={{
@@ -111,7 +111,7 @@ export const TextRevealCard = ({
         ></motion.div>
 
         <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-          <p className="bg-[#323238] bg-clip-text py-10 text-base font-bold text-transparent sm:text-[3rem]">
+          <p className="bg-[#323238] dark:text-gray-200 bg-clip-text py-10 text-base font-bold text-transparent sm:text-[3rem]">
             {text}
           </p>
           <MemoizedStars />
@@ -177,7 +177,7 @@ const Stars = () => {
             borderRadius: "50%",
             zIndex: 1,
           }}
-          className="inline-block"
+          className="inline-block bg-black"
         ></motion.span>
       ))}
     </div>

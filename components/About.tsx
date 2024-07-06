@@ -24,7 +24,7 @@ const About = () => {
       variants={aboutVariant}
       initial="hidden"
       animate="visible"
-      className="w-[23rem] text-center text-lg font-semibold"
+      className="w-3/5 text-right text-lg font-semibold"
     >
       Stepped into the Full Stack world in <Highlight>2023</Highlight>, coding
       wizard since <Highlight>2022</Highlight>. Now on the{" "}

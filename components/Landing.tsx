@@ -43,20 +43,20 @@ const container: Variants = {
 };
 function Landing() {
   return (
-    <div id="home" className="mx-auto w-3/4">
+    <div id="home" className="relative mx-auto w-full xl:w-3/4 ">
       <MotionDiv
-        className="fixed right-72 top-0 -z-[1] h-[31.5rem] w-[31.5rem] rounded-full bg-[#fbe2e3] blur-[8rem]"
+        className="absolute right-1 top-8 -z-[1] h-[31.5rem] w-[31.5rem] rounded-full bg-[#fbe2e3] blur-[8rem] transition-colors duration-300 sm:right-44 dark:bg-[#946263]"
         variants={fadeVariant}
         initial="hidden"
         animate="visible"
       />
       <MotionDiv
-        className="fixed left-52 top-10 -z-[1] h-[31.5rem] w-[31.5rem] rounded-full bg-[#e2f1fb] blur-[8rem]"
+        className="absolute -top-5 left-5 -z-[1] h-[35.5rem] w-[31.5rem] rounded-full bg-[#e2f1fb] blur-[8rem] transition-colors duration-300 sm:left-20 dark:bg-[#676394]"
         initial="hidden"
         animate="visible"
         variants={fadeVariant}
       />
-      <div className="mt-2 flex w-full items-center justify-around p-4">
+      <div className="mt-2 flex w-full flex-col-reverse items-center justify-center p-4 sm:flex-row sm:justify-around">
         <MotionDiv
           className="flex flex-col"
           initial="hidden"
@@ -75,7 +75,7 @@ function Landing() {
                   duration: 0.5,
                 },
               }}
-              className="mb-3 h-1 flex-1 rounded-full bg-gradient-to-r from-black"
+              className="mb-3 h-1 flex-1 rounded-full bg-gradient-to-r from-black dark:from-gray-200"
             />
           </div>
           <GradualSpacing
@@ -135,16 +135,16 @@ function Landing() {
               <Image
                 src={"/ProfilePic.jpg"}
                 alt="profile-pic"
-                width={300}
-                height={300}
-                className="rounded-full shadow-2xl"
+                width={250}
+                height={250}
+                className="w-32 rounded-full shadow-2xl sm:w-72"
               />
               <Tooltip title="yeah, that's me :)" position="top" />
             </div>
           </CardContainer>
         </MotionDiv>
       </div>
-      <div className="mx-auto flex w-3/4 items-center justify-between">
+      <div className="mt-6 flex mx-auto w-full flex-col items-center justify-between sm:mt-0 sm:w-4/5 sm:flex-row">
         <Online initialTime={new Date().toLocaleTimeString()} />
         <About />
       </div>

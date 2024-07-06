@@ -9,7 +9,7 @@ const fadeVariant: Variants = {
     scale: 0.75,
   },
   visible: {
-    opacity: 0.75,
+    opacity: 0.85,
     scale: 1,
     transition: {
       delay: 0.3,
@@ -28,7 +28,7 @@ const Projects = () => {
           viewport={{ once: true }}
           initial="hidden"
           whileInView="visible"
-          className="self-center text-5xl font-bold"
+          className="self-center text-5xl font-bold dark:text-gray-100"
         >
           Personal Projects
         </MotionDiv>

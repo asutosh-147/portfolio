@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import ThemeContextProvider from "@/context/themeContext";
+import ThemeSwitch from "@/components/themeSwitch";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400"] });
 
@@ -17,10 +19,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
-      <body className={`${poppins.className}bg-gray-50 dark:bg-zinc-800`}>
-        <Navbar />
-        {children}
+    <html lang="en" className="custom-scrollbar !scroll-smooth">
+          <body className={`${poppins.className}bg-gray-50 dark:bg-gray-900 transition-colors duration-300 dark:text-gray-200`}>
+        <ThemeContextProvider>
+          <Navbar />
+          {children}
+          <ThemeSwitch/>
+        </ThemeContextProvider>
       </body>
     </html>
   );

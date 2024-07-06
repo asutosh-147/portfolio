@@ -28,7 +28,7 @@ const Project = ({ description, imageUrl, tags, title }: projectData) => {
         scale: transformedScaleProgress,
       }}
       ref={ref}
-      className="group relative h-72 w-3/5 overflow-hidden rounded-lg bg-gray-100 p-5 leading-relaxed shadow-xl transition-all duration-300 odd:self-start even:self-end hover:bg-gray-300"
+      className="group relative h-72 w-3/5 overflow-hidden rounded-lg bg-gray-100 p-5 leading-relaxed shadow-xl transition-all duration-300 odd:self-start even:self-end hover:bg-gray-300 dark:bg-white/30 dark:hover:bg-white/40 dark:text-gray-100"
     >
       <div className="flex h-full w-[45%] flex-col">
         <div className="text-xl font-semibold">{title}</div>
@@ -37,7 +37,7 @@ const Project = ({ description, imageUrl, tags, title }: projectData) => {
           {tags.map((tag, index) => (
             <li
               key={index}
-              className="flex cursor-default rounded-lg bg-gray-500 p-1 font-semibold text-gray-200 transition-all duration-300 hover:bg-gray-800"
+              className="flex cursor-default rounded-lg dark:bg-gray-800 bg-gray-500 p-1 font-semibold text-gray-200 transition-all duration-300 hover:bg-gray-800 dark:hover:bg-gray-700"
             >
               {tag}
             </li>

@@ -36,7 +36,7 @@ const container: Variants = {
 const Online = ({ initialTime }: { initialTime: string }) => {
   const [time, setTime] = useState<string>(initialTime);
   const online =
-    time.includes("AM") && Number(time.split(":")[0]) > 7 ? false : true;
+    time.includes("AM") && Number(time.split(":")[0]) < 7 ? false : true;
   useEffect(() => {
     const interVal = setInterval(() => {
       const currentTime = new Date().toLocaleTimeString();
@@ -53,7 +53,7 @@ const Online = ({ initialTime }: { initialTime: string }) => {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="flex items-center justify-between gap-5"
+      className="flex items-center w-full sm:w-3/4 justify-start sm:gap-10"
     >
       <div className="relative">
         <Image
@@ -61,7 +61,7 @@ const Online = ({ initialTime }: { initialTime: string }) => {
           width={200}
           height={10}
           alt="sleeping Koala"
-          className="h-auto"
+          className="h-auto  transition-colors duration-300 dark:invert"
         />
         {arr.map((_, index) => {
           return (
@@ -79,7 +79,7 @@ const Online = ({ initialTime }: { initialTime: string }) => {
         })}
       </div>
       <div className="flex flex-col items-center justify-between gap-2">
-        <div className="rounded-sm p-1 font-bold ring-[2px] ring-black">
+        <div className="rounded-sm p-1 font-bold ring-[2px] ring-black dark:ring-gray-200">
           {time}
         </div>
         <div className="flex items-center gap-1 font-semibold">

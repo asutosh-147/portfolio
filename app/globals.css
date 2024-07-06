@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* styles/globals.css */
+
+/* WebKit Browsers (Chrome, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    /* For horizontal scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 50px;
+    /* Round the scrollbar thumb */
+    border: 3px solid transparent;
+    /* Padding around thumb to give space */
+    background-clip: content-box;
+    /* Ensures the background color only covers the thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    /* Remove background */
+}
+
+/* Firefox */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+    /* Thumb color and track color */
+    border-radius: 25px;
+}

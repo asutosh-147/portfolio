@@ -17,7 +17,7 @@ const Tooltip = ({
   return (
     <label
       className={cn(
-        "back pointer-events-none absolute mb-3 w-max scale-0 rounded-lg bg-gray-900 px-3 text-center text-lg font-semibold capitalize text-white transition-all duration-300 group-hover:scale-100",
+        "back pointer-events-none absolute mb-3 w-max scale-0 rounded-lg dark:bg-zinc-900 bg-gray-900 px-3 text-center text-lg font-semibold capitalize text-white transition-all duration-300 group-hover:scale-100",
         positionClasses[position],
       )}
     >

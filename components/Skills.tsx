@@ -45,7 +45,7 @@ const Skills = () => {
         className="mx-auto"
       >
         <TextRevealCard
-          className="bg-transparent text-center"
+          className="bg-transparent dark:text-gray-300 text-center"
           text="You Got The Ideas"
           revealText="I Got The Skills"
         ></TextRevealCard>
@@ -69,11 +69,11 @@ const Skills = () => {
                   }}
                   custom={del}
                   key={j}
-                  className="relative flex items-center justify-between gap-2 rounded-md border-2 border-black bg-white p-1"
+                  className="relative flex items-center justify-between gap-2 rounded-md border-2 border-black dark:border-gray-800 bg-white dark:bg-gray-300 p-1 dark:text-gray-950"
                 >
                   <Icon className="flex-1 text-xl" />
                   <div className="font-semibold">{name}</div>
-                  <div className="absolute inset-0 -bottom-1 -right-1 -z-[1] rounded-[inherit] bg-black"></div>
+                  <div className="absolute inset-0 -bottom-1 -right-1 -z-[1] rounded-[inherit] bg-black dark:bg-gray-50"></div>
                 </MotionDiv>
               );
             })}
