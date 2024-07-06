@@ -98,7 +98,7 @@ function Landing() {
               Developer.
             </MotionDiv>
             <MotionDiv variants={itemVariant} className="font-semibold">
-              An{" "}
+              A{" "}
               <Highlight>
                 CSE
                 <Tooltip title="At VSSUT" position="left" />
