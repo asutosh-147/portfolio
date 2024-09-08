@@ -2,6 +2,7 @@ import PricePilot from "@/public/PricePilot.png";
 import ChessMate from "@/public/ChessMate.png";
 import Shoppy from "@/public/Shoppy.png";
 import YTDownloader from "@/public/youtubeDownloader.png"
+import ChearCode from "@/public/cheatcode.png"
 export const projectsData = [
   {
     title: "ChessMate",
@@ -18,6 +19,14 @@ export const projectsData = [
     ],
     imageUrl: ChessMate,
     link:"https://github.com/asutosh-147/chess"
+  },
+  {
+    title: "CheatCode",
+    description:
+      "An Online Code Editor for C++, Python and Javascript. featuring realtime code execution syntax highlighting, Ai features and user friendly interface",
+    tags: ["React.js", "TypeScript", "Node.js", "Tailwind", "Postgresql", "Prisma", "Docker", "Recoil", "AWS"],
+    imageUrl: ChearCode,
+    link:"https://codingkoala.ninja"
   },
   {
     title: "YTDownloader",
