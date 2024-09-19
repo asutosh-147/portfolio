@@ -26,12 +26,12 @@ const icons = [
     Icon: HomeIcon,
   },
   {
-    link: "#skills",
-    Icon: UserIcon,
-  },
-  {
     link: "#projects",
     Icon: CodeBracketIcon,
+  },
+  {
+    link: "#skills",
+    Icon: UserIcon,
   },
   {
     link: "#contact",

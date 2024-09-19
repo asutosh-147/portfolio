@@ -29,7 +29,7 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      className="mx-auto sm:mb-48 sm:mt-20 flex w-full xl:w-4/5 flex-col p-1 items-center gap-8"
+      className="mx-auto sm:mb-48 sm:mt-20 flex w-full xl:w-4/5 flex-col p-1 items-center gap-8 md:pb-20"
     >
       <MotionDiv
         variants={itemVariant}

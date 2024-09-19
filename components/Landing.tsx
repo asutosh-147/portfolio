@@ -43,7 +43,7 @@ const container: Variants = {
 };
 function Landing() {
   return (
-    <div id="home" className="relative mx-auto w-full xl:w-3/4">
+    <div id="home" className="relative mx-auto w-full xl:w-3/4 md:pb-28">
       <MotionDiv
         className="absolute right-1 top-8 h-[37rem] w-[10rem] -z-[1] sm:h-[31.5rem] sm:w-[31.5rem] rounded-full bg-[#fbe2e3] blur-[8rem] transition-colors duration-300 sm:right-44 dark:bg-[#946263]"
         variants={fadeVariant}

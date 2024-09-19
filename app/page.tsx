@@ -9,8 +9,8 @@ function Home() {
   return (
     <div className="custom-scrollbar">
       <Landing />
-      <Skills />
       <Projects />
+      <Skills />
       <Contact />
     </div>
   );

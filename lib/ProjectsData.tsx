@@ -18,23 +18,21 @@ export const projectsData = [
       "Recoil",
     ],
     imageUrl: ChessMate,
-    link:"https://github.com/asutosh-147/chess"
+    link:{
+      github:"https://github.com/asutosh-147/chess",
+      live:"https://chess.codingkoala.ninja",
+    }
   },
   {
     title: "CheatCode",
     description:
-      "An Online Code Editor for C++, Python and Javascript. featuring realtime code execution syntax highlighting, Ai features and user friendly interface",
+      "An Online Code Editor for C++, Python and Javascript. featuring realtime code execution, Ai features and user friendly interface",
     tags: ["React.js", "TypeScript", "Node.js", "Tailwind", "Postgresql", "Prisma", "Docker", "Recoil", "AWS"],
     imageUrl: ChearCode,
-    link:"https://codingkoala.ninja"
-  },
-  {
-    title: "YTDownloader",
-    description:
-    "A Youtube video downloader website which supports upto 4k video downloading",
-    tags: ["Typescript", "React.js", "Node.js", "Tailwind CSS","ytdl-core","ffmpeg"],
-    imageUrl: YTDownloader,
-    link:"https://ytdownload.codingkoala.ninja/"
+    link:{
+      github:"https://github.com/asutosh-147/code-editor",
+      live:"https://codingkoala.ninja"
+    }
   },
   {
     title: "PricePilot",
@@ -42,7 +40,21 @@ export const projectsData = [
       "An E-commerce price tracker web app to track pricings of your desired amazon products",
     tags: ["Next.js", "TypeScript", "MongoDB", "Tailwind", "Bright Data"],
     imageUrl: PricePilot,
-    link:"https://pricepilot.vercel.app/"
+    link:{
+      github:"https://github.com/asutosh-147/price-tracker",
+      live:"https://pricepilot.vercel.app/"
+    }
+  },
+  {
+    title: "YTDownloader",
+    description:
+    "A Youtube video downloader website which supports upto 4k video downloading",
+    tags: ["Typescript", "React.js", "Node.js", "Tailwind CSS","ytdl-core","ffmpeg"],
+    imageUrl: YTDownloader,
+    link:{
+      github:"https://github.com/asutosh-147/ytdownloader",
+      live:"https://ytdownload.codingkoala.ninja/"
+    }
   },
   {
     title: "Shoppy",
@@ -50,6 +62,9 @@ export const projectsData = [
       "A modern fronten admin dashboard for all your work at a single place",
     tags: ["Javascript", "React.js", "Syncfusion", "Tailwind"],
     imageUrl: Shoppy,
-    link:"https://admin.codingkoala.ninja/"
+    link:{
+      github:"https://github.com/asutosh-147/price-tracker",
+      live:"https://admin.codingkoala.ninja/"
+    }
   },
 ] as const;
